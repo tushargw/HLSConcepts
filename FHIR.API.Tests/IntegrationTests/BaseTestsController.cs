@@ -10,7 +10,7 @@ public class BaseTestsController
 
 	private const string _jsonMediaType = "application/json";
 	private const string _textMediaType = "text/plain";
-	private const int _expectedMaxElapsedMilliseconds = 1000000;
+	private const int _expectedMaxElapsedMilliseconds = 3000;
 	private readonly JsonSerializerOptions _jsonSerializerOptions = new() { 
 		PropertyNameCaseInsensitive = true,
 		// WriteIndented = true,
