@@ -39,10 +39,10 @@ public class BaseTestsController
 
 	protected async Task<T?> GetContent<T>(HttpResponseMessage response)
 	{
-		return await JsonSerializer.DeserializeAsync<T?>(await response.Content.ReadAsStreamAsync(), _jsonSerializerOptions);
+		return await JsonSerializer.DeserializeAsync<T?>(await response.Content.ReadAsStreamAsync().ConfigureAwait(false), _jsonSerializerOptions).ConfigureAwait(false);
 	}
 
 	protected async Task<string> GetContent(HttpResponseMessage response) {
-		return await response.Content.ReadAsStringAsync();
+		return await response.Content.ReadAsStringAsync().ConfigureAwait(false);
 	}
 }
