@@ -3,6 +3,8 @@ using Hl7.Fhir.Model;
 using Hl7.Fhir.Rest;
 using Hl7.Fhir.Utility;
 
+// Sample code from: https://github.com/FirelyTeam/fhirstarters/tree/master/dotnet
+
 namespace FHIR.Services;
 
 public class FHIRService : IFHIRService
